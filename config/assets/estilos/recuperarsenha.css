@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+body {
+  background-color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+label {
+  grid-column: 1;
+  margin-bottom: 1%;
+  font-weight: bold;
+  color: #000000;
+}
+
+.logo {
+  font-weight: bold;
+  text-decoration: none;
+  height: 3rem;
+  width: 10rem;
+  animation: fade-in 3s forwards;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+.fa, .fas {
+  font-weight: 900;
+  color: #000000;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.sair {
+  font-family: sans-serif;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  background-color: #005ca9;
+  color: #ffffff;
+  font-size: 1.2em;
+  border: none;
+  padding: 0.5rem 1em;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+}
+
+#app {
+  max-width: 40%;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+form {
+  height: max-content;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 5%;
+}
+
+h2 {
+  white-space: normal;
+  font-size: 1.68rem;
+  color: #005ca9;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#emailErro {
+  display: none;
+}
+
+#emailErro1 {
+  justify-content: flex-start;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  justify-content: flex-start;
+  background-color: transparent;
+  font-size: 1em;
+  text-decoration: none;
+  display: none;
+  margin-top: -0.2rem;
+  margin-bottom: -0.2rem;
+}
+
+#senhaErro {
+  display: none;
+  float: left;
+  justify-content: flex-start;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: -0.2rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  grid-column: 1;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #005ca9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+  background-color: #005ca9;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 20px 10px 20px 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+button[value="redefinir"] {
+  font-family: "Raleway", sans-serif;
+  background-color: #005ca9;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: #005ca9;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1em;
+  border-radius: 1.5rem 1rem 1.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+
+}
+
+#botaosair:hover {
+  color: red;
+}
+
+button[value="redefinir"]:hover {
+  background-color: #0c36be;
+}
+
+.rodape {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+}
+
+.rodape p {
+  font-weight: 600;
+  margin: 0 auto;
+  /* Remover margens para evitar espaçamento extra */
+}
+
+.sair:hover {
+  background-color: #0c36be;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    position: relative;
+    overflow: auto;
+    margin: 0 auto;
+    height: 500px;
+    box-sizing: border-box;
+  }
+
+  form {
+    max-height: 80vh;
+    height: max-content;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 50px;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding-left: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #app {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2%;
+    margin-top: 1vh;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    /* padding-top: auto; */
+    font-weight: bold;
+    margin-top: 5rem;
+    object-position: bottom;
+  }
+
+  /*
+  .rodape {
+    line-height: 0.4rem;
+    text-align: center;
+    white-space: pre-line;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+  }
+  */
+  .rodape p {
+    line-height: 1rem;
+    text-align: center;
+    white-space: pre-line;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+  }
+
+  button[value="redefinir"] {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .sair {
+    position: absolute;
+    font-family: sans-serif;
+    margin: 0.4rem;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    background-color: #005ca9;
+    color: #ffffff;
+    font-size: 1.2em;
+    border: none;
+    padding: 0.5rem 1em;
+    border-radius: 1.5rem 1rem 1.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    white-space: normal;
+    font-size: 2rem;
+    color: #005ca9;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0rem;
+  }
+
+  .rodape p {
+    line-height: 1rem;
+    text-align: center;
+    white-space: pre-line;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+  }
+}

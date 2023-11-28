@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sobre nós</title>
+  <!-- Importante deixarmos a codificação dos caracteres e o título no início de <head> para otimização e procura da página -->
+
+  <!-- meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="robots" content="index, nofollow" />
+  <meta name="googlebot" content="index, nofollow" />
+  <meta name="googlebot" content="notranslate" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="description" content="Login biblioteca SENAI" />
+  <meta name="keywords" content="SENAI, Biblioteca, login" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="author" content="SENAI" />
+
+  <!-- link tags -->
+  <link rel="stylesheet" href="config/assets/estilos/sobre.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Fira+Sans:ital,wght@1,200&amp;family=Montserrat:wght@200&amp;family=Source+Sans+Pro&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Adicione a biblioteca de ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="icon" href="./config/assets/img/senai.ico" type="image/x-icon">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <a title="elementLogoSenai" href="./menu.php">
+            <img title="LogoSenai" src="./config/assets/img/senailogo2.png" class="logo" href="./menu.php">
+          </a>
+        </div>
+
+        <a title="menuIco" href="#" id="menu-icon">
+          <i class="fas fa-bars fa-2x"></i>
+        </a>
+
+        <ul class="navbar-menu" id="menu-list">
+          <li class="botaoVoltar">
+            <a id="botaoVoltar" href="./menu.php">Menu</a>
+          </li>
+          <li class="botaoSair">
+            <a id="botaoSair" href="./logout.php">Sair</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <div class="navbar-toggle">
+            <span class="navbar-toggle-icon"></span>
+          </div>
+          </div>-->
+    </nav>
+  </header>
+
+
+  <div class="titulo">
+    <h1>Sobre nós</h1>
+  </div>
+  <div class="containerBody">
+    <div class="card-body">
+      <h5 class="card-title">Quem somos?</h5>
+      <p class="card-text">Somos alunos do curso técnico de desenvolvimento de sistemas do SENAI de Uberaba Minas
+        Gerais,
+        e
+        este site foi desenvolvido para o projeto final do curso com o objetivo trazer um ambiente intuitivo,
+        confortavel ao usuário e dinâmico!</p>
+      <h5 class="card-text">Desenvolvedores:</h5>
+      <ul>
+        <li> <a rel="noopener" href="https://github.com/brendaluizaf" target="_blank">Brenda Luiza</a></li>
+        <li><a rel="noopener" href="https://github.com/Diogosrsr" target="_blank">Diogo Rodrigues</a></li>
+        <li><a rel="noopener" href="https://github.com/Douglas097" target="_blank">Douglas Silva</a></li>
+        <li><a rel="noopener" href="https://github.com/IsaacArauj0" target="_blank">Isaac Araujo</a></li>
+        <li><a rel="noopener" href="https://github.com/BatataRaiz" target="_blank">João Victor Deamo</a></li>
+        <li><a rel="noopener" href="https://github.com/JoaoVictor897" target="_blank">João Victor Vendramini</a></li>
+        <li><a rel="noopener" href="https://github.com/LeandroOlv" target="_blank">Leandro de Oliveira</a></li>
+        <li><a rel="noopener" href="https://github.com/dudafgg" target="_blank">Maria Eduarda Fernandes</a></li>
+        <li><a rel="noopener" href="https://github.com/kaosbor" target="_blank">Rodrigo Borges</a></li>
+        <li><a rel="noopener" href="https://github.com/kratts9988" target="_blank">Roger Magalhães</a></li>
+        <li><a rel="noopener" href="https://github.com/Desvazio" target="_blank">Tarcísio Marques</a></li>
+      </ul>
+      <h5 class="card-text">Orientador Responsável:</h5>
+      <ul>
+        <li><a href="https://github.com/LYuri26">Lenon Yuri Silva</a></li>
+      </ul>
+      <p class="card-text">O projeto foi desenvolvido com o intuito de facilitar o acesso a livros e revistas,
+        para que os alunos do SENAI possam ter acesso a esses materiais de forma mais fácil e rápida.</p>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      // Define a função toggleDropdown
+      function toggleDropdown() {
+        $("#menu-list").slideToggle(); // Mostra ou oculta a lista suspensa
+      }
+
+      // Adiciona um evento de clique ao elemento com o id "menu-icon"
+      $("#menu-icon").click(toggleDropdown);
+
+      // Adiciona um evento de redimensionamento ao documento
+      $(window).on("resize", function () {
+        // Verifica se a largura da janela é maior que 768 pixels
+        if ($(window).width() > 768) {
+          // Mostra a lista suspensa
+          $("#menu-list").show();
+        } else {
+          // Oculta a lista suspensa
+          $("#menu-list").hide();
+        }
+      });
+    });
+    // Obtenha o botão do menu e o elemento navbar
+    const menuBtn = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+
+    // Manipule o evento de clique do botão
+    menuBtn.addEventListener('click', function () {
+      // Adicione a classe "rounded" ao elemento navbar
+      navbar.classList.remove('rounded');
+    });
+
+    /*
+    document.addEventListener("DOMContentLoaded", function() {
+      var menuIcon = document.getElementById("menu-icon");
+      var menuList = document.getElementById("menu-list");
+ 
+      menuIcon.addEventListener("click", function() {
+        if (menuList.style.display === "none" || menuList.style.display === "") {
+          menuList.style.display = "block";
+        } else {
+          menuList.style.display = "none";
+        }
+      });
+    });*/
+  </script>
+  <footer>
+    <div class="rodape">
+      <p>
+        &copy;2023 UAIBook. Todos os direitos reservados.<br />Curso de
+        Desenvolvimento em Sistemas. Trilhas do Futuro II. <br />SENAI.
+        Uberaba/MG.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Recuperação de Senha</title>
+  <!-- Importante deixarmos a codificação dos caracteres e o título no início de <head> para otimização e procura da página -->
+
+  <!-- meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="robots" content="index, nofollow" />
+  <meta name="googlebot" content="index, nofollow" />
+  <meta name="googlebot" content="notranslate" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="description" content="Cadastro biblioteca SENAI" />
+  <meta name="keywords" content="SENAI, Biblioteca, cadastro" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="author" content="SENAI" />
+
+  <!-- link tags -->
+  <link rel="stylesheet" type="text/css" href="config/assets/estilos/recuperarsenha.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Fira+Sans:ital,wght@1,200&amp;family=Montserrat:wght@200&amp;family=Source+Sans+Pro&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./config/assets/img/senai.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <a href="./logout.php" class="sair">Voltar</a>
+  <div id="app">
+    <form method="POST" id="forms" action="./reset_password.php">
+      <h2>RECUPERAÇÃO DE SENHA</h2>
+      <label for="email">Email</label>
+      <input type="text" id="usuario" name="usuario" placeholder="Digite o email" required
+        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite o email'" autocomplete="off" />
+      <p id="emailErro1" style="color: red;">Email não coincide!</p><br>
+
+      <p id="emailErro"></p>
+
+      <label for="novaSenha">Nova senha</label>
+      <input type="password" id="novaSenha" name="novaSenha" minlength="8" placeholder="Digite a nova senha" required
+        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite a nova senha'" autocomplete="off" />
+      <br />
+
+      <label for="Csenha">Confirmar nova senha</label>
+      <input type="password" id="Csenha" name="Csenha" minlength="8" placeholder="Confirme a senha" required
+        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirme a senha'" autocomplete="off" />
+      <br />
+      <p id="senhaErro" style="color: red">Senhas não coincidem!</p>
+      <br />
+
+      <div class="button-container">
+        <button type="submit" value="redefinir">Redefinir</button>
+      </div>
+      <!--Caso as senhas não coincidam, mostrar mensagem-->
+    </form>
+  </div>
+  <script>
+    const email = document.getElementById('usuario');
+    const emailErro = document.getElementById('emailErro1');
+    const senha = document.getElementById("novaSenha");
+    const cSenha = document.getElementById("Csenha");
+    const senhaErro = document.getElementById("senhaErro");
+
+    cSenha.addEventListener('blur', () => {
+      if (email.value !== cEmail.value) {
+        emailErro.style.display = 'block';
+        email.value = '';
+      } else {
+        emailErro.style.display = 'none';
+      }
+    });
+
+
+    cSenha.addEventListener("blur", () => {
+      if (senha.value !== cSenha.value) {
+        senhaErro.style.display = "block";
+        //senha.value = "";
+        cSenha.value = "";
+      } else {
+        senhaErro.style.display = "none";
+      }
+    });
+  </script>
+  <script src="./config/assets/js/email_fiemg.js"></script>
+  <footer>
+    <div class="rodape">
+      <p>
+        &copy;2023 UAIBook. Todos os direitos reservados.<br />Curso de
+        Desenvolvimento em Sistemas. Trilhas do Futuro II. <br />SENAI.
+        Uberaba/MG.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

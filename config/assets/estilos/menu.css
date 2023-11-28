@@ -1,0 +1,608 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  overflow-x: auto;
+  height: 100vh;
+  position: relative;
+}
+#botaosair:hover{
+  color: red;
+}
+.navbar {
+  background-color: #005ca9;
+  background-position: top;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 4);
+  display: flex;
+  padding-bottom: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+
+.navbar-container {
+  /*align-items: flex-start;*/
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  /* Movemos essas tags para o .navbar-container
+  display: flex;
+  align-items: center;
+  */
+  font-weight: bold;
+  text-decoration: none;
+  /*object-fit: cover;
+  /*width: 10rem;*/
+  height: 3rem;
+  width: 10rem;
+  animation: fade-in 3s forwards;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+  /* cor de fundo ao passar o mouse */
+  /*border-radius: 200px;
+  margin-right: 200px;*/
+}
+
+.navbar-logo:hover {
+  box-shadow: 0 0 10px rgba(0, 92, 169, 0.7);
+  transform: scale(1.05);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.fa {
+  font-family: "Font Awesome";
+}
+
+.fa .fafa-bars::before {
+  content: "\f0c9";
+}
+.fa, .fas {
+  font-weight: 900;
+  color: #000000;
+}
+#menu-icon {
+  display: none;
+  /* Oculta o ícone em dispositivos desktop */
+}
+
+.navbar-menu li {
+  text-align: center;
+  margin-right: 4rem;
+}
+
+.navbar-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+.navbar-menu li:last-child {
+  margin-right: 30px;
+  /* Removendo margin do último elemento */
+}
+
+#conteudo {
+  font-size: 26px;
+  display: grid;
+  padding-left: 0em;
+  line-height: 1.5;
+  align-content: flex-start;
+  justify-content: start;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-right: 0rem;
+  font-weight: 600;
+  max-width: 50%;
+}
+
+.navbar-menu li a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* vei quem colocou isso estava sob efeito PESADO de droga
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-toggle-icon {
+  cursor: pointer;
+  width: 2%;
+  height: 0.2em;
+  background-color: #ffffff;
+}
+h1 {
+  text-align: center;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-toggle.active .navbar-toggle-icon:nth-child(1) {
+    transform: rotate(45deg) translate(2px, 2px);
+  }
+
+  .navbar-toggle.active .navbar-toggle-icon:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active .navbar-toggle-icon:nth-child(3) {
+    transform: rotate(-45deg) translate(1px, -1px);
+  }
+  .logo {
+    width: 3em; /* Ajuste a largura para dispositivos móveis 
+  }
+
+  .navbar-menu li {
+    margin-right: 0.5em; /* Ajuste o espaçamento para dispositivos móveis 
+  }
+}
+
+.imgscar {
+  border-style: none;
+  border-width: 0 2px;
+  /* Define a largura da borda somente nas laterais 
+  border-radius: 60%/60%;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 1);
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  /* Adicione um espaçamento inferior para afastar a imagem dos elementos abaixo
+  background-color: transparent;
+  z-index: -1;
+}
+
+.slide {
+  width: 90%;
+  align-items: center;
+  position: relative;
+  display: inline-flex;
+
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.slide img {
+  max-width: 100%;
+  height: 100%;
+  flex-flow: row;
+}
+
+*/
+header {
+  display: flex;
+}
+
+.titulo {
+  display: flex;
+  font-family: "montserrat", "sans-serif";
+  font-size: 2.6rem;
+  align-content: flex-start;
+  /* Centraliza o texto */
+  max-width: 800px;
+  /* Define uma largura máxima para o título */
+  margin: 3rem auto 0rem auto;
+  /* Centraliza horizontalmente */
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "montserrat", "sans-serif";
+  font-size: 2.6rem;
+  padding-left: 2rem;
+  align-content: flex-start;
+  text-align: center;
+  /* Centraliza o texto */
+  max-width: 800px;
+  /* Define uma largura máxima para o título */
+  margin: 0 auto;
+  /* Centraliza horizontalmente */
+  box-sizing: border-box;
+  /* Inclui a largura das bordas e o padding na largura total do elemento */
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.5;
+  padding-left: 2em;
+  align-content: flex-start;
+  justify-content: start;
+  font-weight: 600;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 0rem;
+  bottom: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.rodape {
+  color: black;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+}
+/*.logosenai {
+  animation-delay: 0s;
+}
+
+.logobib {
+  animation-delay: 5s;
+}*/
+
+#linhatexto {
+  margin-top: 0;
+  display: inline-block;
+  height: 10vh;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  /* Alinha o carrossel à direita */
+  align-items: center;
+  height: 55vh;
+  padding: 0 2%;
+  /* Adiciona um espaço de 2% nas laterais do carrossel */
+  box-sizing: border-box;
+  /* Inclui a largura das bordas e o padding na largura total do elemento */
+}
+
+#slider {
+  z-index: -1;
+  height: 25vw;
+  position: absolute;
+  right: 2%;
+  /* Alinha o carrossel à direita com uma margem de 2% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  /* Define a largura do carrossel em 90% do container */
+  max-width: 50vw;
+  /* Define uma largura máxima para o carrossel */
+}
+
+#slider img {
+  opacity: 0;
+  border-radius: 600px;
+  position: absolute;
+  object-fit: contain;
+  transition: opacity 800ms;
+  width: 100%;
+  /* Define a largura das imagens do slide para ocupar todo o espaço disponível */
+  /* Permite que a altura das imagens seja ajustada proporcionalmente à largura */
+}
+#logosenai {
+  height: 100%;
+
+}
+.slide {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+}
+
+#slider img.selected {
+  opacity: 1;
+  object-fit: contain;
+}
+.logobib {
+  height: auto;
+
+}
+.navbar.rounded {
+  border-radius: 50px;
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: top;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 4);
+    padding-bottom: 2px;
+    z-index: 999;
+    text-align: center;
+    border-radius: 0px 0px 120px 120px / 0px 0px 120px 120px;
+    max-width: 60%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width:max-content !important;  
+  }
+  body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    justify-content: center;
+  }
+
+  /*body {
+    margin-top: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }*/
+
+  .navbar-menu {
+    list-style-type: none;
+    justify-content: center;
+    display: grid;
+    text-align: center;
+    align-items: flex-start;
+  }
+
+  .navbar-container {
+    /*align-items: flex-start;*/
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    justify-items: center;
+    place-items: center;
+    position: relative;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+
+  .navbar-logo {
+    box-sizing: content-box;
+  }
+
+  .fa {
+    font-family: "Font Awesome";
+    align-self: center;
+  }
+
+  /* Seletor para o ícone */
+  #menu-icon {
+    place-items: center;
+    display: block;
+  }
+
+  /* Seletor para o menu suspenso */
+  #menu-list {
+    display: none;
+    margin-top: 0px;
+  }
+
+  h1 {
+    position: relative;
+    margin-top: 0;
+    /* Define a margem superior como 0 para eliminar o espaço */
+    display: flex;
+    justify-content: center;
+    font-family: "montserrat", "sans-serif";
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 2vh;
+    padding-top: 1rem;
+    padding-left: 0rem;
+  }
+
+  #linhatexto {
+    align-items: flex-start;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    line-height: 1.5;
+    align-content: flex-start;
+    justify-content: start;
+  }
+
+  p {
+    line-height: 1.5;
+    align-content: flex-start;
+    padding-left: 0rem;
+    justify-content: start;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-right: 0rem;
+    font-weight: 600;
+  }
+
+  ul {
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    padding-inline-start: 0rem;
+  }
+
+  .titulo {
+    display: flex;
+    font-family: "montserrat", "sans-serif";
+    font-size: 2.6rem;
+    align-content: flex-start;
+    /* Centraliza o texto */
+    max-width: 800px;
+    /* Define uma largura máxima para o título */
+    margin: 0rem 0rem 0rem 0rem;
+    /* Centraliza horizontalmente */
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .fa,
+  .fas {
+    text-align: center;
+    align-items: center;
+    justify-content: start;
+  }
+  .fa-2x{
+    font-size: 1.5em !important;
+  }
+  .navbar-menu li {
+    justify-content: stretch;
+    margin-top: 0.8rem;
+    margin-right: 0;
+  }
+
+
+  .navbar-menu li:last-child {
+    margin-right: 0rem;
+    /* Removendo margin do último elemento */
+  }
+
+  .logo {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: content-box;
+  }
+
+  .rodape {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    /* padding-top: auto; */
+    font-weight: bold;
+    object-position: bottom;
+  }
+
+  #conteudo {
+    margin: 0 auto;
+    font-size: 18px;
+    max-width: 90%;
+    padding-left: 0em;
+    line-height: 1.5;
+    align-content: center;
+    justify-content: center;
+    font-weight: 600;
+    line-height: 1.5;
+    font-weight: 600;
+    align-items: flex-start;
+    text-align: center;
+    align-items: center;
+  }
+
+  #linhatexto {
+    width: 100%;
+  }
+
+  /*
+  .rodape {
+    line-height: 0.4rem;
+    text-align: center;
+    white-space: pre-line;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+  }
+  */
+  .rodape p {
+    line-height: 1rem;
+    text-align: center;
+    white-space: pre-line;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+  }
+
+  .container {
+    position: relative;
+    height: 55vh;
+    justify-content: center;
+    /* Centraliza o carr#ossel na página */
+    /* Remove o espaço nas laterais */
+  }
+
+  #slider {
+    position: relative;
+    right: auto;
+    /* width: 90vw; */
+    /* height: 20vh; */
+    max-width: 100%;
+    /* padding: 0; */
+    margin: 0 auto;
+  }
+
+  #app {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
