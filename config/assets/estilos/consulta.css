@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   align-content: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0px;
 }
 
