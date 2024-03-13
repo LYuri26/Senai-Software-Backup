@@ -11,12 +11,12 @@ body {
   align-items: center;
   font-size: 1.2rem;
   overflow-x: auto;
-  height: 100vh;
-  flex-direction: column;
   align-content: center;
   justify-content: space-between;
   flex-wrap: nowrap;
   margin: 0px;
+  height: 100vh;
+  flex-direction: column;
 }
 
 header {
@@ -252,6 +252,9 @@ th:last-child {
 }
 
 @media (max-width: 768px) {
+    body {
+        height: 90vh;
+    }
   .navbar {
     display: flex;
     justify-content: center;
@@ -392,6 +395,7 @@ thead {
 
 footer {
   text-align: center;
+  margin: 0 auto;
   font-weight: bold;
 }
 

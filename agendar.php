@@ -135,10 +135,10 @@ $_SESSION['login_message'] = 'Para cancelar um agendamento, por favor, faça log
     </div>
 
     <?php
-    $host = '127.0.0.1';
-    $dbname = 'u683147803_biblioteca';
-    $username = 'u683147803_biblioteca';
-    $password = 'SenaiMg123';
+$host = '127.0.0.1';
+$dbname = 'u683147803_biblioteca';
+$username = 'u683147803_biblioteca';
+$password = 'SenaiMg123';
     // Conectar ao banco de dados usando pdo
 
     try {
